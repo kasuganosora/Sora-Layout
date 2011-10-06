@@ -1,0 +1,47 @@
+Sora Layout 0.1
+MIT-license
+使用方法
+在head里面添加
+<code>
+	<link rel="stylesheet/less" type="text/css" href="soralayout.less" />
+	<script type="text/javascript" src="less-1.1.3.min.js"></script>
+</code>
+最新的 less库可以去http://lesscss.org/ 下载
+
+一栏布局
+<code>
+	<div class="container"></div>
+</code>
+左侧栏(2栏布局)
+<code>
+	<div class="container-left-two">
+		<div class="content"></div>
+		<div class="sidebar"></div>
+	</div>
+</code>
+右侧栏布局(3栏布局)
+<code>
+	<div class="container-right-two">
+		<div class="content"></div>
+		<div class="sidebar"></div>
+	</div>
+</code>
+
+三栏布局
+<code>
+	<div class="container-three-bar">
+		<div class="content"></div>
+		<div class="sidebar"></div>
+		<div class="sidebar-right"></div>
+	</div>
+</code>
+
+CSS3盒子模型布局
+
+<code>
+	<div class="container-css3">
+		<div class="content"></div>
+		<div class="sidebar"></div>
+		<div class="sidebar-right"></div>
+	</div>
+</code>

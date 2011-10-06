@@ -1,0 +1,120 @@
+/**************************************
+*		Sora Layout 0.1
+*		MIT-license
+**************************************/
+
+@background-color: white;
+@div-color:#DCEAF4;
+@Sidebar_interval:10px;
+@sidebar_width:200px;
+@container_width:940px;
+
+*{
+	padding:0;
+	margin:0;
+}
+
+.container,.container-left-two,.container-right-two,.container-three-bar,.container-css3{
+	width:@container_width;
+	margin:0 auto;
+	overflow: hidden;
+	position:relative;
+}
+.header,.fooder{
+	width:@container_width;
+	margin:0 auto;
+	clear:both;
+	background-color:@div-color;
+	overflow: hidden;
+	position:relative;
+}
+/*****************************************
+	左侧栏布局
+****************************************/
+.container-left-two > .content{
+	float: right;
+	background-color:@div-color;
+	width:@container_width - @sidebar_width - @Sidebar_interval;
+}
+.container-left-two > .sidebar{
+	float: left;
+	width: @sidebar_width;
+	background-color:@div-color;
+}
+/*****************************************
+	右栏布局
+****************************************/
+.container-right-two > .content{
+	float: left;
+	background-color:@div-color;
+	width:@container_width - @sidebar_width - @Sidebar_interval;
+}
+.container-right-two > .sidebar{
+	float: right;
+	width: @sidebar_width;
+	background-color:@div-color;
+}
+/*****************************************
+	三栏布局
+****************************************/
+.container-three-bar > .content{
+	width: @container_width - @sidebar_width * 2 - @Sidebar_interval * 2;
+	margin-left:@sidebar_width + @Sidebar_interval;
+	float:left;
+	background-color:@div-color;
+}
+.container-three-bar > .sidebar{
+	background-color:@div-color;
+	position:absolute;
+	width:@sidebar_width;
+}
+.container-three-bar > .sidebar-right{
+	background-color:@div-color;
+	float:right;
+	width:@sidebar_width;
+}
+/************************************
+*	等高
+*************************************/
+.equalLayout{
+	padding-bottom: 99999px;
+    margin-bottom: -99999px;
+}
+/************************************
+* CSS3 盒子模型布局
+*************************************/
+.container-css3{
+	display: -moz-box;
+	display: -webkit-box;
+	display: box;
+	-moz-box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+	box-orient: horizontal;
+}
+.css3_box-ordinal-group_set(@group){
+	-webkit-box-ordinal-group: @group;
+	box-ordinal-group:@group;
+	-moz-box-ordinal-group:@group;
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
+	box-flex: 1;
+}
+
+.container-css3 > .content{
+	.css3_box-ordinal-group_set(2);
+	background-color:@div-color;
+	width:@container_width - @sidebar_width * 2-@Sidebar_interval * 2;
+	margin-left:@Sidebar_interval;
+}
+.container-css3 > .sidebar{
+	.css3_box-ordinal-group_set(1);
+	width:@sidebar_width;
+	background-color:@div-color;
+}
+.container-css3 > .sidebar-right{
+	.css3_box-ordinal-group_set(3);
+	margin-left:@Sidebar_interval;
+	width:@sidebar_width;
+	background-color:@div-color;
+}
+/******************************/
